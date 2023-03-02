@@ -60,7 +60,7 @@ const Calculator = () => {
 
   return (
     <CalculatorContainer>
-      <Display>{displayValue || 0}</Display>
+      <Display data-testid="result">{displayValue || 0}</Display>
       <ButtonContainer>
         <Button onClick={() => handleButtonClick('7')}>7</Button>
         <Button onClick={() => handleButtonClick('8')}>8</Button>
@@ -74,7 +74,7 @@ const Calculator = () => {
         <Button onClick={() => handleButtonClick('2')}>2</Button>
         <Button onClick={() => handleButtonClick('3')}>3</Button>
         <Button onClick={() => handleButtonClick('-')}>-</Button>
-        <Button onClick={() => handleButtonClick('0')}>0</Button>
+        <Button onClick={() => handleButtonClick('0')} data-testid="zero-button">0</Button>
         <Button onClick={() => handleButtonClick('.')}>.</Button>
         <Button onClick={handleClearButtonClick}>C</Button>
         <Button onClick={() => handleButtonClick('+')}>+</Button>
